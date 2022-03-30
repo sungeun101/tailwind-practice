@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MenuIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import LogoImage from "../images/img/logo.jpg";
 import classNames from "classnames";
 
@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="flex justify-between items-center px-6 md:px-24 lg:px-48">
+      <header className="flex justify-between items-center px-6 md:px-24 lg:px-[15%]">
         <div className="w-16">
           <a href="/">
             <img src={LogoImage} alt="logo" />
@@ -52,12 +52,18 @@ export default function Navbar() {
 
       <div
         className={classNames(
-          "py-2 px-3 md:hidden flex flex-col items-center bg-main text-white z-50",
+          "py-3 px-3 md:hidden flex flex-col items-center bg-main text-white z-50 absolute top-0 w-full",
           {
             hidden: !isMenuOpen,
           }
         )}
       >
+        <button
+          className="flex justify-end w-[90%]"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <XIcon class="h-5 w-5" />
+        </button>
         {menu.map((item) => (
           <button className="p-2" key={item.id}>
             {item.name}
