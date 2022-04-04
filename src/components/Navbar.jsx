@@ -25,6 +25,11 @@ const menu = [
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleScrollMenu = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <header className="flex justify-between items-center px-6 md:px-24 lg:px-[15%] h-16">
@@ -36,9 +41,13 @@ export default function Navbar() {
 
         <div class="hidden md:flex">
           {menu.map((item) => (
-            <div className="font-medium px-5" key={item.id}>
+            <button
+              className="font-medium m-2"
+              key={item.id}
+              onClick={() => handleScrollMenu(item.id)}
+            >
               {item.name}
-            </div>
+            </button>
           ))}
         </div>
 
@@ -65,7 +74,11 @@ export default function Navbar() {
           <XIcon class="h-5 w-5" />
         </button>
         {menu.map((item) => (
-          <button className="p-2" key={item.id}>
+          <button
+            className="p-2"
+            key={item.id}
+            onClick={() => handleScrollMenu(item.id)}
+          >
             {item.name}
           </button>
         ))}
