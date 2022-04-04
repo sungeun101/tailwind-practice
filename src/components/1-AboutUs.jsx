@@ -6,7 +6,7 @@ export default function AboutUs() {
   return (
     <section
       id="aboutus"
-      className="relative h-[60vh]"
+      className="relative min-h-[350px] h-[70vh] lg:h-screen max-h-[400px] md:max-h-[600px] lg:max-h-[96vh]"
       style={{
         background: `url(${bg})`,
       }}
@@ -14,9 +14,9 @@ export default function AboutUs() {
       <img
         src={img}
         alt="aboutus"
-        className="absolute bottom-0 right-[20%] w-[60%] "
+        className="absolute -bottom-[10%] right-[12%] h-full"
       />
-      <div className="absolute top-[13%] left-[15%] md:left-[10%]">
+      <div className="absolute top-[13%] left-[12%] md:left-[10%]">
         <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl md:mb-1 lg:mb-2">
           Global Mobile
         </h1>

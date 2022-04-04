@@ -10,10 +10,7 @@ import icon8 from "../images/3-service-detail/icon8.png";
 
 export default function ServiceDetail() {
   return (
-    <section
-      id="service-detail"
-      className="h-screen w-full relative  min-h-[900px]"
-    >
+    <section id="service-detail" className="h-screen relative min-h-[900px]">
       <div className="absolute bottom-0 w-full h-full flex flex-col justify-around items-center">
         <header className="flex flex-col items-center justify-center text-xl md:text-2xl lg:text-4xl font-bold">
           <h1 className="pt-[5%]">

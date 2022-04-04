@@ -16,7 +16,7 @@ module.exports = {
       "7xl": "5rem",
     },
     fontFamily: {
-      sans: ["Noto Sans KR", "sans-serif"],
+      sans: ["IBM Plex Sans", "sans-serif"],
     },
     colors: {
       main: "#10325a",

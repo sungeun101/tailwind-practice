@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
-import LogoImage from "../images/img/logo.jpg";
+import LogoImage from "../images/logo.jpg";
 import classNames from "classnames";
 
 const menu = [
@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="flex justify-between items-center px-6 md:px-24 lg:px-[15%]">
+      <header className="flex justify-between items-center px-6 md:px-24 lg:px-[15%] h-16">
         <div className="w-16">
           <a href="/">
             <img src={LogoImage} alt="logo" />
