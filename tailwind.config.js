@@ -22,6 +22,7 @@ module.exports = {
       main: "#10325a",
       white: "#f8fafc",
       orange: "#FF4D4D",
+      footer: "#343434",
     },
     screens: {
       sm: "640px",
