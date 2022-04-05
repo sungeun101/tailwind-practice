@@ -48,8 +48,8 @@ export default function Services() {
             <div className="text-xs md:text-sm lg:text-base text-center mt-2">
               We have an autonomous solution that has been accumulated by a
               number of companies' performance marketing. With this solution, we
-              are able to run optimized ad campaigns step-by-step KPI even rapid
-              and radical traffic changes.
+              are able to run optimized ad campaigns step-by-step KPI even in
+              rapid and radical traffic changes.
             </div>
           </div>
         </li>

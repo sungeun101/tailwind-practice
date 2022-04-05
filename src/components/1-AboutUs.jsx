@@ -27,7 +27,7 @@ export default function AboutUs() {
           Every campaign of OnetwoAD is perfectly transparent and
         </h2>
         <h2 className="text-sm md:text-lg lg:text-2xl">
-          optimized for expandability, creativity, goal-oriented and ROI.
+          optimized for expandability, creativity and ROI.
         </h2>
       </div>
     </section>

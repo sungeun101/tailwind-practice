@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import LogoImage from "../images/logo.jpg";
-import classNames from "classnames";
 
 const menu = [
   {
@@ -39,7 +38,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div class="hidden md:flex">
+        <nav class="hidden md:flex">
           {menu.map((item) => (
             <button
               className="font-medium m-2"
@@ -49,7 +48,7 @@ export default function Navbar() {
               {item.name}
             </button>
           ))}
-        </div>
+        </nav>
 
         <button
           className="md:hidden"
@@ -59,13 +58,10 @@ export default function Navbar() {
         </button>
       </header>
 
-      <div
-        className={classNames(
-          "py-3 px-3 md:hidden flex flex-col items-center bg-main text-white z-50 absolute top-0 w-full",
-          {
-            hidden: !isMenuOpen,
-          }
-        )}
+      <nav
+        className={`py-3 px-3 md:hidden flex flex-col items-center bg-main text-white z-50 absolute top-0 w-full ${
+          !isMenuOpen && "hidden"
+        }`}
       >
         <button
           className="flex justify-end w-[90%]"
@@ -82,7 +78,7 @@ export default function Navbar() {
             {item.name}
           </button>
         ))}
-      </div>
+      </nav>
     </>
   );
 }
