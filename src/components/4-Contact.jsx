@@ -16,14 +16,14 @@ export default forwardRef(function Contact(props, ref) {
         background: `url(${bg})`,
       }}
     >
-      <div className="absolute bottom-0 w-full h-full flex flex-col justify-around items-center py-[2%]">
+      <div className="absolute bottom-0 w-full h-full flex flex-col justify-around items-center py-[3%]">
         <header className="flex flex-col items-center justify-center">
           <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
             Contact Us
           </h1>
         </header>
 
-        <div className="bg-main w-[4%] h-1"></div>
+        <div className="bg-main w-[4%] h-1 mt-3"></div>
 
         <ul className="h-full w-[100%] lg:w-[80%] flex items-center justify-around">
           <li className="flex flex-wrap flex-col items-center w-[50%]">
