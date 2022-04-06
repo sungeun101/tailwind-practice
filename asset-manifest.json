@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca53c150.css",
-    "main.js": "/static/js/main.e715966d.js",
-    "static/js/787.58cc7f8b.chunk.js": "/static/js/787.58cc7f8b.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.ca53c150.css.map": "/static/css/main.ca53c150.css.map",
-    "main.e715966d.js.map": "/static/js/main.e715966d.js.map",
-    "787.58cc7f8b.chunk.js.map": "/static/js/787.58cc7f8b.chunk.js.map"
+    "main.js": "/tailwind-practice/static/js/main.b5fdf836.js",
+    "static/media/bg.jpg": "/tailwind-practice/static/media/bg.2406843f0f90c97acfea.jpg",
+    "static/media/img.png": "/tailwind-practice/static/media/img.73752a9441ffea948756.png",
+    "static/media/logo.jpg": "/tailwind-practice/static/media/logo.5659683f30851bc8c9a1.jpg",
+    "index.html": "/tailwind-practice/index.html",
+    "main.b5fdf836.js.map": "/tailwind-practice/static/js/main.b5fdf836.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca53c150.css",
-    "static/js/main.e715966d.js"
+    "static/js/main.b5fdf836.js"
   ]
 }
