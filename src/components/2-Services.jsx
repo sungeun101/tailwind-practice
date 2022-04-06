@@ -1,13 +1,14 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import bg from "../images/2-services/bg.jpg";
 import img from "../images/2-services/img.png";
 import icon1 from "../images/2-services/icon1.png";
 
-export default function Services() {
+export default forwardRef(function Services(props, ref) {
   return (
     <section
+      ref={(el) => (ref.current[1] = el)}
       id="services"
-      className="relative h-screen flex flex-col items-center justify-evenly lg:py-10 min-h-[900px]"
+      className="relative h-screen flex flex-col items-center justify-evenly lg:py-10 min-h-[900px] max-h-[1200px]"
       style={{
         background: `url(${bg})`,
       }}
@@ -56,4 +57,4 @@ export default function Services() {
       </ul>
     </section>
   );
-}
+});

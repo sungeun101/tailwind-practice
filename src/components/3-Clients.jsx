@@ -1,16 +1,20 @@
-import React from "react";
-import icon1 from "../images/3-service-detail/icon1.png";
-import icon2 from "../images/3-service-detail/icon2.png";
-import icon3 from "../images/3-service-detail/icon3.png";
-import icon4 from "../images/3-service-detail/icon4.png";
-import icon5 from "../images/3-service-detail/icon5.png";
-import icon6 from "../images/3-service-detail/icon6.png";
-import icon7 from "../images/3-service-detail/icon7.png";
-import icon8 from "../images/3-service-detail/icon8.png";
+import React, { forwardRef } from "react";
+import icon1 from "../images/3-clients/icon1.png";
+import icon2 from "../images/3-clients/icon2.png";
+import icon3 from "../images/3-clients/icon3.png";
+import icon4 from "../images/3-clients/icon4.png";
+import icon5 from "../images/3-clients/icon5.png";
+import icon6 from "../images/3-clients/icon6.png";
+import icon7 from "../images/3-clients/icon7.png";
+import icon8 from "../images/3-clients/icon8.png";
 
-export default function ServiceDetail() {
+export default forwardRef(function Clients(props, ref) {
   return (
-    <section id="service-detail" className="h-screen relative min-h-[1100px]">
+    <section
+      ref={(el) => (ref.current[2] = el)}
+      id="clients"
+      className="h-screen relative min-h-[1100px] max-h-[1200px]"
+    >
       <div className="absolute bottom-0 w-full h-full flex flex-col justify-around items-center py-[2%]">
         <header className="flex flex-col items-center justify-center text-xl md:text-2xl lg:text-4xl font-bold">
           <h1>
@@ -87,4 +91,4 @@ export default function ServiceDetail() {
       </div>
     </section>
   );
-}
+});

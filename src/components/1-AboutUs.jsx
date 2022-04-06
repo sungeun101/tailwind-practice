@@ -1,10 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import bg from "../images/1-aboutus/bg.jpg";
 import img from "../images/1-aboutus/img.png";
 
-export default function AboutUs() {
+export default forwardRef(function AboutUs(props, ref) {
   return (
     <section
+      ref={(el) => (ref.current[0] = el)}
       id="aboutus"
       className="relative min-h-[350px] h-[70vh] lg:h-screen max-h-[400px] md:max-h-[600px] lg:max-h-[96vh]"
       style={{
@@ -32,4 +33,4 @@ export default function AboutUs() {
       </div>
     </section>
   );
-}
+});

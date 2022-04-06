@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import LogoImage from "../images/logo.jpg";
 
@@ -21,16 +21,17 @@ const menu = [
   },
 ];
 
-export default function Navbar() {
+export default forwardRef(function Navbar(props, clickedRef) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleScrollMenu = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  const handleScrollMenu = (i) => {
+    clickedRef.current[i].scrollIntoView();
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <>
+      {/* pc */}
       <header className="flex justify-between items-center px-6 md:px-24 lg:px-[15%] h-16">
         <div className="w-16">
           <a href="/">
@@ -38,12 +39,12 @@ export default function Navbar() {
           </a>
         </div>
 
-        <nav class="hidden md:flex">
-          {menu.map((item) => (
+        <nav className="hidden md:flex">
+          {menu.map((item, index) => (
             <button
               className="font-medium m-2"
               key={item.id}
-              onClick={() => handleScrollMenu(item.id)}
+              onClick={() => handleScrollMenu(index)}
             >
               {item.name}
             </button>
@@ -58,10 +59,13 @@ export default function Navbar() {
         </button>
       </header>
 
+      {/* mobile */}
       <nav
-        className={`py-3 px-3 md:hidden flex flex-col items-center bg-main text-white z-50 absolute top-0 w-full ${
-          !isMenuOpen && "hidden"
-        }`}
+        className={`py-3 px-3 md:hidden flex flex-col items-center bg-main text-white z-50 absolute w-full ${
+          isMenuOpen
+            ? "opacity-100 visible top-0"
+            : "opacity-0 invisible -top-96"
+        } transition-all duration-200 ease-in`}
       >
         <button
           className="flex justify-end w-[90%]"
@@ -69,11 +73,11 @@ export default function Navbar() {
         >
           <XIcon class="h-5 w-5" />
         </button>
-        {menu.map((item) => (
+        {menu.map((item, index) => (
           <button
             className="p-2"
             key={item.id}
-            onClick={() => handleScrollMenu(item.id)}
+            onClick={() => handleScrollMenu(index)}
           >
             {item.name}
           </button>
@@ -81,4 +85,4 @@ export default function Navbar() {
       </nav>
     </>
   );
-}
+});
